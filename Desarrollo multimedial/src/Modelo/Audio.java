@@ -42,7 +42,7 @@ public class Audio {
 		System.out.println("Se metio audio");
 		
 		try {
-			AudioInputStream audioIn = AudioSystem.getAudioInputStream(new File("Crazy_Train.wav").getAbsoluteFile());
+			AudioInputStream audioIn = AudioSystem.getAudioInputStream(new File(this.fileName).getAbsoluteFile());
 			Clip clip = AudioSystem.getClip();
 			clip.open(audioIn);
 			clip.start();
