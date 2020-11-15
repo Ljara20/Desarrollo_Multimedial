@@ -18,9 +18,6 @@ public class Vista {
 		System.out.println("¡Indique la ruta donde se encuentra el archivo!");
 		String ruta = myObj.next();
 		return ruta;
-		
-		
 	}
-
 }
 

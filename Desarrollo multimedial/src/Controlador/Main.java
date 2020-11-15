@@ -8,7 +8,7 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Vista vista = new Vista();
-		Imagen imagen = new Imagen();
+		//Imagen imagen = new Imagen();
 		Video video = new Video();
 		Audio audio = new Audio("null");
 		int opcion = 0;
@@ -29,13 +29,9 @@ public class Main {
 					audio.cargar();
 					break;
 				default:
+					System.out.println("None");
 					break;
 			}
-			
 		}
-		
-		
-
 	}
-
 }

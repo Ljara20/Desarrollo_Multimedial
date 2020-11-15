@@ -42,17 +42,7 @@ public class Audio {
 		System.out.println("Se metio audio");
 		
 		try {
-			//File song = new File(fileName);
-            InputStream file = getClass().getResourceAsStream("Crazy_Train.mp3");
-            
-         // Se obtiene un Clip de sonido
-            //Clip sonido = AudioSystem.getClip();
-            
-            // Se carga con un fichero wav
-            //sonido.open(AudioSystem.getAudioInputStream(new BufferedInputStream(file)));
-            //sonido.start();
-			
-			AudioInputStream audioIn = AudioSystem.getAudioInputStream(file);
+			AudioInputStream audioIn = AudioSystem.getAudioInputStream(new File("Crazy_Train.wav").getAbsoluteFile());
 			Clip clip = AudioSystem.getClip();
 			clip.open(audioIn);
 			clip.start();
