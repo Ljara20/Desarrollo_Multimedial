@@ -56,6 +56,7 @@ public class Video extends Application{
     }
 
 	/*public void start(Stage stage) throws Exception {
+	public void start(Stage stage) throws Exception {
 		System.out.println(this.ruta);
         final String NOMBRE_ARCHIVO = "video.mp4";
         File archivo = new File(this.ruta);
@@ -76,5 +77,5 @@ public class Video extends Application{
 	public void main(String[] args) throws Exception {
         launch(args);
     }
-	
 }
+	

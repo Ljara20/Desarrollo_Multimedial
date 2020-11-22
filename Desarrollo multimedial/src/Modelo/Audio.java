@@ -1,21 +1,19 @@
 package Modelo;
 
-import java.io.BufferedInputStream;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStream;
 import java.util.ArrayList;
-
-import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
-import javax.sound.sampled.DataLine;
 
 public class Audio {
 	
-	private String fileName;
+	public String fileName;
     private ArrayList<Integer> datos;
+    public Clip clip;
+    public AudioInputStream audioIn;
+    public long clipTime;
+    
     
     public Audio(String filename){
         this.fileName = filename;
@@ -46,27 +44,27 @@ public class Audio {
 			Clip clip = AudioSystem.getClip();
 			clip.open(audioIn);
 			clip.start();
+			this.audioIn = AudioSystem.getAudioInputStream(new File(this.fileName).getAbsoluteFile());
+			this.clip = AudioSystem.getClip();
+
 		}
 		catch (Exception e) {
             System.out.println("Error -- " + e.toString());
             this.fileName = "null";
         }	
 	}
+	
+	public void reproducir() {
+		clip.setMicrosecondPosition(0);
+		clip.start();	
+	}
+	
+	public void pausar() {
+		this.clipTime = this.clip.getMicrosecondPosition();
+		clip.stop();
+	}
+
+	public void reanudar() {
+		clip.start();
+	}
 }
-
-
-
-
-/*try
-{
-	AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("sounds" + System.getProperty("file.separator") + ruta).getAbsoluteFile());
-	AudioFormat format = audioInputStream.getFormat();
-	DataLine.Info info = new DataLine.Info(Clip.class, format);
-	Clip sound = (Clip)AudioSystem.getLine(info);
-	sound.open(audioInputStream);
-	System.out.println("Se caego");
-}
-catch(Exception e)
-{
-	System.out.println("noooooo");
-}*/
