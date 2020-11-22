@@ -1,4 +1,5 @@
 package Modelo;
+//package application; 
 
 import java.io.File;
 
@@ -29,7 +30,6 @@ public class Video extends Application{
 		this.ruta = ruta;
 	}
 	
-	@Override 
 	public void start(Stage primaryStage) throws Exception {
         //Initialising path of the media file, replace this with your file path   
         String path = "video.mp4";  
@@ -56,7 +56,6 @@ public class Video extends Application{
     }
 
 	/*public void start(Stage stage) throws Exception {
-	public void start(Stage stage) throws Exception {
 		System.out.println(this.ruta);
         final String NOMBRE_ARCHIVO = "video.mp4";
         File archivo = new File(this.ruta);
@@ -70,7 +69,7 @@ public class Video extends Application{
         escenario.getChildren().add(ventana);
         Scene escena = new Scene(escenario, 500, 400);
         stage.setScene(escena);
-        stage.setTitle("Reproducción Vídeo");
+        stage.setTitle("Reproducciï¿½n Vï¿½deo");
         stage.show();
     }*/
 	

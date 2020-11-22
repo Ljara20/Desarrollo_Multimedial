@@ -1,4 +1,4 @@
-package src.Controlador;
+package Controlador;
 
 import java.io.IOException;
 import java.net.URL;
@@ -32,7 +32,7 @@ public class Main extends Application {
 			switch(opcion) {
 				case 1:
 					ruta = vista.pedirRuta();
-					//video.cargar(ruta);
+					video.cargar(ruta);
 					rutaVideo = vista.pedirRutaVideo();
 					video.setRuta(rutaVideo);
 					video.main(args);
@@ -92,7 +92,6 @@ public class Main extends Application {
 		}
 	}
 
-	@Override
 	public void start(Stage primaryStage) throws Exception {
 		// TODO Auto-generated method stub
 		
