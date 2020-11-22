@@ -21,7 +21,7 @@ public class Main {
 			switch(opcion) {
 				case 1:
 					ruta = vista.pedirRuta();
-					video.cargar(ruta);
+					//video.cargar(ruta);
 					break;
 				case 2:
 					ruta = vista.pedirRuta();

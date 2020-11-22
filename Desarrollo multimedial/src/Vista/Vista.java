@@ -2,23 +2,6 @@ package Vista;
 
 import java.util.Scanner;
 
-import java.awt.BorderLayout;
-
-import java.awt.Component;
-
-import java.io.*;
-
-import javax.media.CannotRealizeException;
-
-import javax.media.Manager;
-
-import javax.media.NoPlayerException;
-
-import javax.media.Player;
-
-import javax.swing.JPanel;
-
-import java.net.URL;
 
 public class Vista {
 	
